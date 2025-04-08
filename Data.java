@@ -34,7 +34,7 @@ public class Data {
     }
     
     public String toString(){
-        return dia+"\n"+mes+"\n"+ano;
+        return "Data de fundação: "+dia+"/"+mes+"/"+ano;
     }
 
     public boolean verificaAnoBissexto(){

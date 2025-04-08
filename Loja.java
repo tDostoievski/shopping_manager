@@ -2,19 +2,44 @@ public class Loja {
     private String nome;
     private int quantidadeFuncionarios;
     private double salarioBaseFuncionario;
+    private Endereco end;
+    private Data data;
 
-    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario){
+    public Loja (){
+
+    }
+
+    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco end, Data data){
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario; 
+        this.end = end; 
+        this.data = data;
     }
 
-    public Loja(String nome, int quantidadeFuncionarios){
+    public Loja(String nome, int quantidadeFuncionarios, Endereco end, Data data){
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
+        this.end = end;
+        this.data = data;
         this.salarioBaseFuncionario = -1; 
     }
+
+    public Data getData() {
+        return data;
+    }
+
+    public void setData(Data data) {
+        this.data = data;
+    }
     
+    public Endereco getEndereco(){
+        return end;
+    }
+    public void setEndereco(Endereco end){
+        this.end = end;
+        }
+
     public String getNome(){
         return nome; 
     }
@@ -40,7 +65,7 @@ public class Loja {
     }
     
     public String toString(){
-        return nome+"\n"+quantidadeFuncionarios+"\n"+salarioBaseFuncionario;
+        return nome+"\n"+quantidadeFuncionarios+"\n"+salarioBaseFuncionario+"\n"+end+"\n"+data;
     }
 
     public double gastosComSalario(){

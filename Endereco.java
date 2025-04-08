@@ -7,6 +7,10 @@ public class Endereco {
     private String cep;
     private String numero;
     private String complemento;
+
+    public Endereco(){
+        
+    }
     
     public Endereco (String nomeDaRua, String cidade, String estado, String pais, String cep, String numero, String complemento){
         this.nomeDaRua = nomeDaRua;
