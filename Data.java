@@ -3,6 +3,11 @@ public class Data {
     private int mes;
     private int ano;
 
+
+    public Data (){
+
+    }
+    
     public Data (int dia, int mes, int ano){
         this.dia = dia;
         this.mes = mes;
@@ -34,7 +39,7 @@ public class Data {
     }
     
     public String toString(){
-        return "Data de fundação: "+dia+"/"+mes+"/"+ano;
+        return "Data de fundação: "+dia+"\n"+mes+"\n"+ano;
     }
 
     public boolean verificaAnoBissexto(){

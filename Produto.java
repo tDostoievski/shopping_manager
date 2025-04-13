@@ -3,6 +3,9 @@ public class Produto {
     private double preco;
     private Data data;
 
+    public Produto (){
+    }
+
     public Produto(String nome, double preco, Data data){
         this.nome = nome;
         this.preco = preco;
@@ -34,10 +37,21 @@ public class Produto {
     }
 
     public String toString(){
-        return nome+"\n"+preco; 
+        return nome+"\n"+preco+"\n"+    data; 
     }
 
-    public boolean estaVencido(){
-        if
+    public Boolean estaVencido(Data data){
+        int dia = data.getDia();
+        int mes = data.getMes();
+        int ano = data.getAno();
+
+        if ((dia > 20 || mes > 10) && ano >= 2023)  { 
+            return true;
+    }
+        else{
+            return false;
+        }
     }
 }
+
+    
